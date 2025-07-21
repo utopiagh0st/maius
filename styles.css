@@ -1,0 +1,33 @@
+* {
+    font-family: 'Courier New', Courier, monospace;
+    text-decoration: none;
+}
+
+/* Barra de navegación */
+.navbar {
+    background-color: rgb(36, 23, 46);
+}
+.navdiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo a img {
+    height: 80px;
+}
+li {
+    list-style: none;
+    display: inline-block;
+}
+li a {
+    color: white;
+    font-size: 18px;
+}
+
+body {
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    color:rgb(0, 255, 0);
+    background-color: #000000;
+}
+
