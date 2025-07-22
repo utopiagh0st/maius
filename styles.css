@@ -3,31 +3,54 @@
     text-decoration: none;
 }
 
-/* Barra de navegación */
+/*barrita*/
 .navbar {
-    background-color: rgb(36, 23, 46);
+    background-color: #000000;
 }
 .navdiv {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
+
 .logo a img {
-    height: 80px;
+    height: 100px;
+    cursor: pointer;
 }
+
 li {
     list-style: none;
     display: inline-block;
+    margin-right: 25px;
 }
 li a {
     color: white;
-    font-size: 18px;
+    font-size: 25px;
+    cursor: pointer
 }
 
+.insta {
+  display: inline-flex;
+  align-items: center;
+  background-color: #a7407f;
+  color: rgb(216, 206, 65);
+  border: none;
+  padding: 10px 16px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  gap: 8px; /* espacio entre imagen y texto */
+}
+.insta img {
+  width: 20px;
+  height: 20px;
+}
+
+/*cuerpo*/
 body {
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
-    color:rgb(0, 255, 0);
+    color:rgb(255, 255, 0);
     background-color: #000000;
 }
 
