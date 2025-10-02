@@ -1,44 +1,39 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>maius</title>
-  <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>maius - end</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="icons/icon.png" type="image/png">
+    <!--Importing fonts from google: Bytesized, Coral Pixels and Jolly Lodger-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aubrey&family=Bytesized&family=Coral+Pixels&family=Jacquard+12&family=New+Rocker&display=swap" rel="stylesheet">
 </head>
+
 <body>
-  
-  <!-- barrita -->
-  <nav class="navbar">
-    <nav>
-      <div class = "navdiv">
-        <div class = "logo"><a href="#"><img src="icons/maius.png" alt="INICIO"></a></div>
-        <img src="res/img/smileyseparator.gif" alt="kalaka" style="margin-left: 6%; height: 40px;">
-        <ul>
-          <a target="_blank" href="https://www.instagram.com/utopiagh0st/" class="insta_button">
-            <img src="res/img/instagram.png" alt="insta">
-          </a>
-        </ul>
-      </div>
-    </nav>
-  </nav>
-
-  <div class="fila_welcome">
-    <audio controls><source src="https://large-gray-oaoqqm9y3n.edgeone.app/laCorpoEstaCerrada.mp3"></audio>
-  </div>
-  
-  <h1>h --- M</h1>
-  <!-- <p>fran mmmmm fran mmmmmm<br><br>
-  al fin hay un lugar donde fran puede chillar y llorar ante todos los <img src="res/img/ojos.png" alt="ojos" style="height: 16px;"> pero sin que nadie escuche<br><br>
-  encuentra lo que buscas o pierde lo que ya encontraste <br><br>
-  sabes por dónde comenzar:</p> -->
-  <p>aún no comienza,<br>
-  recuerda volver pronto<br><br>
-  vuelve a casa<br>
-  </p>
-  <a target="_blank" href="https://www.instagram.com/utopiagh0st/" class="insta_button">
-    <img src="res/img/instagram.png" alt="insta">
-  </a>
-
+    <!--<a href="index.html" style="text-decoration: none;"><h1>maius</h1></a>-->
+    <a href="index.html" style="text-decoration: none;"><img style="max-width: 255px; width: 75%;" src="icons/MAIUSLOGOLIVE.gif"></a>
+    <div id="hideable" class="orangebgstyle">
+        <p id="text1">La performatividad de lo íntimo de manera objetiva y subjetiva ft. utopia<br><br>
+        Para ciertos ojos y nadie más antes de su muerte</p>
+        <img style="max-width: 255px; width: 100%;"src="res/img/judgehehehe.png"> 
+        <br>
+        <audio id="hiddenSong" hidden src="res/raw/lullabyfortheblind.mp3"></audio>
+        <button onclick="startHiddenSong()">▶</button>
+    </div>
+    <br>
+    <a href="https://www.instagram.com/utopiagh0st/"><img hidden id="fransleep" style="max-width: 300px; width: 100%;" src="res/img/oldfransleep.png"></a>
+    <script>
+        <!--change text function-->
+        function startHiddenSong(){
+            document.getElementById("text1").innerHTML = "changetest";
+            document.getElementById("hiddenSong").play();
+            document.getElementById("hideable").hidden = true;
+            document.getElementById("fransleep").hidden = false;
+        }
+    </script>  
 </body>
+
 </html>
