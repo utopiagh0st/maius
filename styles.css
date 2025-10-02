@@ -24,7 +24,8 @@ body button {
     border-color: rgb(144, 185, 77);
 }
 .orangebgstyle {
-    background-color: rgb(128, 43, 28);
+    /*background-color: rgb(128, 43, 28);*/
+    background-color: rgba(45, 23, 66, 0.781);
     padding: 3%;
     text-align: center;
 }
