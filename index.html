@@ -27,7 +27,7 @@
         <img style="max-width: 255px; width: 100%;"src="res/img/judgehehehe.png"> 
         <br>
         <audio id="hiddenSong" hidden src="res/raw/lullabyfortheblind.mp3"></audio>
-        <button onclick="startHiddenSong()">▶</button>
+        <button onclick="showHidden()">▶</button>
     </div>
     <br>
     <div id="showable" hidden style="font-family: resistance;color: rgb(57, 51, 73);">
@@ -45,17 +45,15 @@
     <p>With string and needle you'll mend your desire</p>
     <p>With wine and chocolate you'll stain it</p>
     <p>And when the fire reaches the last room, there won't be a bed for you anymore</p>
+    <p>Your body is exhaust, your mind won't let go</p>
+    <p>Just one option remains, exactly what you need</p>
     <br>
-    <a href="gallery.html"><button class="disabled">not yet</button></a>
+    <p style="color: aliceblue;">Say it</p>
+    <input id="answer" placeholder="Type here" autocomplete="off">
+    <br><br>
+    <button id="answerButton" class="disabled">Offer</button>
     </div>
-    <script>
-        <!--change text function-->
-        function startHiddenSong() {
-            document.getElementById("hiddenSong").play();
-            document.getElementById("hideable").hidden = true;
-            document.getElementById("showable").hidden = false;
-        }
-    </script>  
+    <script src="indexscript.js"></script>  
 </body>
 
 </html>

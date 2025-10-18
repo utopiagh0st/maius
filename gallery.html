@@ -23,16 +23,17 @@
     <audio hidden loop autoplay id="bgmusic" src="res/raw/laCorpoEstaCerrada.mp3"></audio>
     <h1 class="purplebgstyle" style="font-size: 350%; text-size-adjust: 60%;">{ GALLERY }</h1>
     <div class="gallery">
-        <img src="res/img/gallery/bluemovielyrics.png" alt="Blue Movie" onclick="openOverlay('img', this.src)">
-        <img src="res/img/gallery/fakeprophecy.png" alt="Fake Prophecy" onclick="openOverlay('img', this.src)">
-        <img src="res/img/gallery/purplewaterspreview.png" alt="Purple Waters" onclick="openOverlay('video', 'res/img/gallery/purplewaters.mp4')">
-        <img src="res/img/gallery/nutelladaddy.png" alt="Nutella Daddy" onclick="openOverlay('img', this.src)">
-        <img src="res/img/gallery/pasta.gif" alt="December 26th" onclick="openOverlay('img', this.src)">
-        <img src="res/img/gallery/pool.png" alt="pool" onclick="openOverlay('img', this.src)">
-        <img src="res/img/gallery/russians.png" alt="Russians" onclick="openOverlay('img', this.src)">
-        <img src="res/img/gallery/shrine.png" alt="Shrine" onclick="openOverlay('img', this.src)">
-        <img src="res/img/gallery/thisdude.png" alt="Larry Morgan" onclick="openOverlay('img', this.src)">
-        <img src="res/img/gallery/utopiairl.png" alt="trve" onclick="openOverlay('img', this.src)">
+        <img src="res/img/gallery/bluemovielyrics.png" alt="Blue Movie" onclick="openOverlay('img', this.src, 'Blue Movie')">
+        <img src="res/img/gallery/fakeprophecy.png" alt="Fake Prophecy" onclick="openOverlay('img', this.src, 'Isak, Dank & Prank')">
+        <img src="res/img/gallery/purplewaterspreview.png" alt="Purple Waters" onclick="openOverlay('video', 'res/img/gallery/purplewaters.mp4', 'Stagnant Waters')">
+        <img src="res/img/gallery/nutelladaddy.png" alt="Nutella Daddy" onclick="openOverlay('img', this.src, '...')">
+        <img src="res/img/gallery/pool.png" alt="pool" onclick="openOverlay('img', this.src, 'The Felt')">
+        <img src="res/img/gallery/russians.png" alt="Russians" onclick="openOverlay('img', this.src, `It is the one game that's still going to be around when all the other games are gone!`)">
+        <img src="res/img/gallery/thisdude.png" alt="Larry Morgan" onclick="openOverlay('img', this.src, `De Morguen`)">
+        <img src="res/img/gallery/utopiairl.png" alt="trve" onclick="openOverlay('img', this.src, 'A mark which belongs to one of the triggers, not too deep in the forest')">
+        <img src="res/img/gallery/artbleedsmoney.png" alt="Art Bleeds Money" onclick="openOverlay('img', this.src, 'Art bleeds on the same few people over and over')">
+        <img src="res/img/gallery/pasta.gif" alt="December 26th" onclick="openOverlay('img', this.src, 'December 26th, Depart Day')">
+        <img src="res/img/gallery/shrine.png" alt="Shrine" onclick="openOverlay('img', this.src, 'The one and only muse')">
     </div>
     
     <div class="overlay" id="overlay">
@@ -41,7 +42,7 @@
     </div>
 
   <script>
-    function openOverlay(type, src) {
+    function openOverlay(type, src, caption = "") {
         const content = document.getElementById("overlay-content");
         content.innerHTML = ""; // clear previous content
 
@@ -49,6 +50,9 @@
             document.getElementById("bgmusic").volume = 0.45;
             const img = document.createElement("img");
             img.src = src;
+            img.style.display = "block";
+            img.style.maxWidth = "100%";
+            img.style.margin = "0 auto";
             content.appendChild(img);
 
         } else if (type === "video") {
@@ -57,7 +61,27 @@
             video.src = src;
             video.controls = true;
             video.autoplay = true;
+            video.style.maxWidth = "100%";
+            video.style.display = "block";
+            video.style.margin = "0 auto";
             content.appendChild(video);
+        }
+
+        // Add caption for both images and videos
+        if (caption) {
+            const text = document.createElement("p");
+            text.textContent = caption;
+            text.style.textAlign = "center";
+            text.style.color = "white";
+            text.style.background = "rgba(0, 0, 0, 0.6)";
+            text.style.padding = "8px 12px";
+            text.style.marginTop = "10px";
+            text.style.fontSize = "1.1em";
+            text.style.display = "inline-block";
+            text.style.maxWidth = "90%";
+            text.style.marginLeft = "auto";
+            text.style.marginRight = "auto";
+            content.appendChild(text);
         }
 
         document.getElementById("overlay").style.display = "flex";
@@ -68,7 +92,7 @@
         document.getElementById("overlay-content").innerHTML = ""; // stop video when closing
         document.getElementById("bgmusic").volume = 1;
     }
-  </script>
+</script>
 
 </body>
 

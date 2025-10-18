@@ -61,6 +61,16 @@ body button:hover {
     background-color: rgb(216, 240, 111);
     border-color: rgb(15, 37, 4);
 }
+input {
+    font-family: Anthony;
+    font-size:xx-large;
+    text-align: center;
+    border-style: dashed;
+    border-width: 5px;
+    border-color: white;
+    background-color: black;
+    color: antiquewhite;
+}
 .unusedtestcolor {
     color: rgb(54, 80, 52);
     background-color: rgba(219, 255, 57, 0.692);
