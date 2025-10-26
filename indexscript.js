@@ -1,3 +1,4 @@
+// @ts-nocheck
 //change text function
 function showHidden() {
     document.getElementById("hiddenSong").play();

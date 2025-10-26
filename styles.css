@@ -44,6 +44,11 @@ h1 {
     font-size: 350%;
     color: rgb(129, 214, 112);
 }
+h2 {
+    color: rgb(184, 169, 101);
+    font-family: Facade, monospace;
+    font-size: 175%;   
+}
 body button {
     font-size: 175%;
     font-family: New Rocker;
@@ -70,6 +75,15 @@ input {
     border-color: white;
     background-color: black;
     color: antiquewhite;
+}
+canvas {
+    border-style:ridge;
+    border-color: rgb(139, 35, 139);
+    border-width: 10px;
+    top: 50%;
+    bottom: 50%;
+    width: 600px;
+    height: 600px;
 }
 .unusedtestcolor {
     color: rgb(54, 80, 52);
@@ -99,8 +113,16 @@ input {
 }
 .purplebgstyle p{
     color: rgb(184, 169, 101);
+    font-weight: normal;
     font-family: Facade, monospace;
     font-size: 175%;
+}
+.purplebgstyle h2{
+    color: rgb(255, 255, 255);
+    font-family: Trickster, monospace;
+    font-weight: normal;
+    font-size: 175%;
+    background-color: rgba(0, 0, 0, 0.555);
 }
 
 .gallery {

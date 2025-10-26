@@ -1,15 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta font-credits=
-    "Résistance by A collective
-    Trickster by Jean-Baptiste Morizot
-    Façade by Éléonore Fines
-    All fonts mentioned distributed by velvetyne.fr.
-    All other fonts taken from Google Fonts">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>maius - game</title>
+    <title>maius - rps</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="icons/icon.png" type="image/png">
     <!--Importing fonts from google: Bytesized, Coral Pixels and Jolly Lodger-->
@@ -20,12 +14,21 @@
 
 <body>
     <a href="index.html" style="text-decoration: none;"><img style="max-width: 255px; width: 75%;" src="icons/MAIUSLOGOLIVE.gif"></a>
-    <h1 id="salutationh1">hola</h1>
-    <p id="salutationp1">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni sit id ullam maiores ab quod magnam voluptates. Ab corporis voluptatum adipisci nobis, illum, consequuntur exercitationem eos voluptates voluptas similique et!</p>
-    <label>Your name</label>
-    <input id="textbox">
-    <button id="textboxbutton">Enter</button>
-    <script src="game.js"></script>
+    <h1>Rock, Paper, Scissors</h1>
+    <div class="purplebgstyle" style="padding-top: 1%;">
+        <h2>Computer Choice:</h2>
+        <p id="computerChoice"></p>
+        <h2>Your Choice: </h2>
+        <p id="userChoice"></p>
+        <h2>Result:</h2>
+        <p><span id="result"></span></p>
+
+        <button id="rock" onclick="pickUserChoice('rock')">Rock</button>
+        <button id="paper" onclick="pickUserChoice('paper')">Paper</button>
+        <button id="scissors" onclick="pickUserChoice('scissors')">Scissors</button>
+
+        <script src="rockPaperScissors.js"></script>
+    </div>
 </body>
 
 </html>
