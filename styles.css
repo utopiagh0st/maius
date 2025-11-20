@@ -1,3 +1,6 @@
+*{
+    margin: 0%;
+}
 @font-face {
   font-family: 'Anthony';
   src: url('fonts/Anthony.woff2') format('woff2');
@@ -26,23 +29,47 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'FlameOn';
+  src: url('fonts/FlameOn.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
     background: url("res/img/screensavert.gif");
-    background-size:cover;
+    background-size: cover;
     background-attachment: fixed;
     background-color: rgb(8, 0, 0);
     color: rgb(255, 255, 255);
     font-family: monospace;
     font-size: 111%;
-    padding: 9%;
-    padding-top: 0%;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 0;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 0;
+    min-height: 100vh;
+}
+body > *:not(.wall) {
+  flex: 0 0 auto;
 }
 h1 {
     font-family: Coral Pixels, monospace;
     max-width: 100%;
     font-size: 350%;
     color: rgb(129, 214, 112);
+}
+.blogtitle {
+    background: url('res/img/firebarnobg.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: FlameOn;
+    font-weight: normal;
+    color: rgb(154, 48, 253);
 }
 h2 {
     color: rgb(184, 169, 101);
@@ -99,6 +126,54 @@ canvas {
     background-color: rgb(126, 255, 255);
     border-color: rgb(25, 77, 221);
     color: rgb(8, 14, 19);
+}
+.wall {
+    flex: 1 1 auto;
+    background-position: center;
+    background: url("res/img/fullwallcyan.png");
+    background-blend-mode:darken;
+    background-color: rgb(96, 255, 194);
+    width: 92%;
+    height: 100;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 0; 
+    position: relative;
+    z-index: 1; /* ensures it shows above body background */
+    padding: 4%;
+}
+.paperstyle {
+    background: url("res/img/papertexture.png");
+    background-color: rgb(110, 40, 175);
+    background-blend-mode:difference;
+    background-repeat: round;
+    width: 90%;
+    height: auto;       /* keeps full image ratio */
+    padding: 5%;
+    padding-bottom: 2%;
+    padding-top: 2%;
+    text-align: center;
+}
+.paperstyle p {
+    background: rgba(134, 224, 31, 0.479);
+    color: rgb(0, 0, 0);
+    text-align: left;
+    width: fit-content;
+    padding-left: 1%;
+    padding-right: 1%;
+    font-weight: normal;
+    font-family: Facade, monospace;
+    font-size: 175%;
+}
+.paperstyle h2 {
+    background: rgba(45, 16, 212, 0.479);
+    width: fit-content;
+    height: fit-content;
+    padding-top: 0.2%;
+    padding-bottom: 0.2%;
+    padding-left: 1%;
+    padding-right: 1%;
+    color: rgb(255, 255, 255);
 }
 .purplebgstyle {
     /*background-color: rgb(128, 43, 28);*/
