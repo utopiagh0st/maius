@@ -129,13 +129,13 @@ canvas {
     color: rgb(8, 14, 19);
 }
 .wall {
-    flex: 1 1 auto;
-    background-position: center;
+/*    flex: 1 1 auto;*/
+    background-position:top;
     background: url("res/img/fullwallcyan.png");
     background-blend-mode:darken;
     background-color: rgb(96, 255, 194);
     width: 92%;
-    height: 100;
+    height:fit-content;
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 0; 
