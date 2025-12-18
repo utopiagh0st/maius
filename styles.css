@@ -36,23 +36,33 @@
   font-style: normal;
 }
 
+.snowybg {
+    background: url('/maius/res/img/snowybg.png');    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 body {
     background: url("res/img/screensavert.gif");
     background-size: cover;
     background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
     background-color: rgb(8, 0, 0);
+
     color: rgb(255, 255, 255);
     font-family: monospace;
     font-size: 111%;
     text-align: center;
+
     display: flex;
     flex-direction: column;
-    height: 100%;
-    margin: 0;
-    margin-left: 5%;
-    margin-right: 5%;
-    padding: 0;
+
     min-height: 100vh;
+    margin: 0 5%;
+    padding: 0;
+    overflow-x: hidden;
 }
 body > *:not(.wall) {
   flex: 0 0 auto;
@@ -94,7 +104,29 @@ body button:hover {
     background-color: rgb(216, 240, 111);
     border-color: rgb(15, 37, 4);
 }
+
+.paperstylexmas button {
+    font-size: 175%;
+    font-family: New Rocker;
+    width: 25%;
+    min-width: 150px;
+    border-width: 10px;
+    border-style: groove;
+    color: rgb(255, 255, 255);
+    background-color: rgba(160, 3, 68, 0.692);
+    border-color: rgb(134, 28, 196);
+}
 input {
+    font-family: Anthony;
+    font-size:xx-large;
+    text-align: center;
+    border-style: dashed;
+    border-width: 5px;
+    border-color: white;
+    background-color: black;
+    color: antiquewhite;
+}
+textarea {
     font-family: Anthony;
     font-size:xx-large;
     text-align: center;
@@ -143,6 +175,7 @@ canvas {
     z-index: 1; /* ensures it shows above body background */
     padding: 4%;
 }
+
 .paperstyle {
     background: url("res/img/papertexture.png");
     background-color: rgb(110, 40, 175);
@@ -276,3 +309,67 @@ canvas {
     font-weight: bold;
 }
 /*end of gallery stuff*/
+
+.wallxmas {
+/*    flex: 1 1 auto;*/
+    background-position:top;
+    background: url("res/img/fullwallcyan.png");
+    background-blend-mode:darken;
+    background-color: rgb(96, 255, 194);
+    width: 92%;
+    height:fit-content;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 0; 
+    position: relative;
+    z-index: 1; /* ensures it shows above body background */
+    padding: 4%;
+}
+
+.paperstylexmas {
+    background: url("res/img/papertexture.png");
+    background-color: rgb(175, 40, 114);
+    background-blend-mode:difference;
+    background-repeat: round;
+    width: 90%;
+    height: auto;       /* keeps full image ratio */
+    padding: 5%;
+    padding-bottom: 2%;
+    padding-top: 2%;
+    text-align: center;
+}
+
+.paperstylexmas p {
+    background: rgba(76, 224, 31, 0.479);
+    color: rgb(0, 0, 0);
+    text-align: left;
+    width: fit-content;
+    padding-left: 1%;
+    padding-right: 1%;
+    font-weight: bold;
+    font-family: Facade, monospace;
+    font-size: 140%;
+}
+.paperstylexmas h2 {
+    background: rgba(179, 16, 212, 0.582);
+    width: fit-content;
+    height: fit-content;
+    padding-top: 0.2%;
+    padding-bottom: 0.2%;
+    padding-left: 1%;
+    padding-right: 1%;
+    color: rgb(153, 255, 57);
+    font-family: Anthony;
+    font-size: 200%;
+}
+.paperstylexmas a {
+    background: rgb(163, 255, 57);
+    color: rgb(16, 0, 233);
+    text-align: left;
+    width: fit-content;
+    padding-left: 1%;
+    padding-right: 1%;
+    font-weight: bold;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 160%;
+}
