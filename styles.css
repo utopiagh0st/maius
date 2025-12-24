@@ -317,6 +317,12 @@ canvas {
 /*end of gallery stuff*/
 
 /*XMAS SHIT (A FUCKING LOT)*/
+@keyframes swing {
+    0%   { transform: rotate(-3deg); }
+    50%  { transform: rotate(3deg); }
+    100% { transform: rotate(-3deg); }
+}
+
 .wallxmas {
 /*    flex: 1 1 auto;*/
     background-position:top;
@@ -383,7 +389,7 @@ canvas {
 
 .overlaycard {
     width: 1200px;
-    height: 1800px;
+    height: 750px;
 
     display: flex;
     flex-direction: row;
@@ -397,6 +403,30 @@ canvas {
     box-sizing: border-box;
 
     border-radius: 24px;
+    image-rendering: pixelated;
+    position: relative;
+}
+.close-btn {
+    display: flex;           /* 🔴 center the × properly */
+    align-items: center;
+    justify-content: center;
+    padding: 0; 
+    line-height: 1; 
+    position: absolute;
+    top: 16px;
+    right: 16px;
+
+    width: 4px;
+    height: 30px;
+
+    border: none;
+    background: rgba(0, 0, 0, 0.726);
+    color: rgb(255, 0, 0);
+
+    font-size: 50px;
+    cursor: pointer;
+    line-height: 1;
+    font-family: monospace;
     image-rendering: pixelated;
 }
 
@@ -464,15 +494,40 @@ canvas {
 .tree-card {
     position: absolute;
     cursor: pointer;
-    /* optional: add a small border or shadow for visibility */
+
+    transform-origin: top center; /* se mueve bonito */
+    animation: swing 20ms ease-in-out infinite;
 }
 .tree-card img {
     image-rendering: pixelated;
     width: 100px;
     max-height: 100px;
     height:min-content;
+    border-radius: 50%; /*lo hace circular*/
 }
 
+.tree-card::before { /*coso q agarra las decos */
+    content: "";
+    position: absolute;
+    top: -16px;
+    left: 50%;
+    width: 2px;
+    height: 16px;
+    background: #1eff00;
+    transform: translateX(-50%);
+}
+
+.tree-card:nth-child(odd) {
+    animation-duration: 67ms;
+}
+
+.tree-card:nth-child(even) {
+    animation-duration: 57ms;
+}
+
+.tree-card:nth-child(3n) {
+    animation-delay: 30ms;
+}
 .tree-card:nth-child(1) { top: 13%; left: 48%; }
 .tree-card:nth-child(2) { top: 17%; left: 43%; }
 .tree-card:nth-child(3) { top: 23%; left: 51%; }

@@ -230,7 +230,6 @@
     </div>
 
     <div class="overlay" id="overlay">
-        <span class="close-btn" onclick="closeOverlay()">×</span>
         <div class="overlay-content" id="overlay-content"></div>
     </div>
     
@@ -251,7 +250,7 @@
         const card = document.createElement("div");
         card.className = "overlaycard";
         scaler.appendChild(card);
-
+        
 
         if (type === "img") {
             document.getElementById("bgmusic").volume = 0.45;
@@ -271,6 +270,12 @@
                 text.innerHTML = caption.replace(/\;/g, "<br><br>");
                 right.appendChild(text);
             }
+            const closeBtn = document.createElement("button");
+            closeBtn.className = "close-btn";
+            closeBtn.textContent = "×";
+            closeBtn.onclick = closeOverlay;
+
+            right.appendChild(closeBtn);
             card.appendChild(left);
             card.appendChild(right);
         } else if (type === "video") {
