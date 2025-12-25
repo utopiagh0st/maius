@@ -389,7 +389,7 @@ canvas {
 
 .overlaycard {
     width: 1200px;
-    height: 750px;
+    height: 700px;
 
     display: flex;
     flex-direction: row;
@@ -410,20 +410,21 @@ canvas {
     display: flex;           /* 🔴 center the × properly */
     align-items: center;
     justify-content: center;
-    padding: 0; 
+    padding-right: 20px; 
     line-height: 1; 
     position: absolute;
-    top: 16px;
-    right: 16px;
+    top: 5%;
+    
+    right: 3%;
 
     width: 4px;
     height: 30px;
 
     border: none;
-    background: rgba(0, 0, 0, 0.726);
+    background: rgba(0, 0, 0, 0);
     color: rgb(255, 0, 0);
 
-    font-size: 50px;
+    font-size: 100px;
     cursor: pointer;
     line-height: 1;
     font-family: monospace;
@@ -445,7 +446,7 @@ canvas {
 }
 
 .card-left {
-    padding-top: 3%;
+    padding-top: 2%;
     flex: 1;
     display: flex;
     align-items: center;
@@ -455,8 +456,8 @@ canvas {
 
 .card-right {
     width: 10%;
-    padding-right: 8%;
-    padding-left: 5%;
+    padding-right: 11%;
+    padding-left: 0%;
     max-width: 35%;
     flex: 1;
     display: flex;
@@ -466,16 +467,18 @@ canvas {
 
 .card-left img {
     max-width: 100%;
-    max-height: 28%;
+    max-height: 70%;
     object-fit: contain;
     border-radius: 0;
     box-shadow: 0 0 0px rgba(0,0,0,0);
+    padding-left: 3%;
 }
 
 .card-right .card-text {
-    color: #2402a0;
+    color: #450085;
     font-size: 160%;
     font-family: HandWritten;
+    font-weight: bold;
     text-align: center;
     line-height: 1.2;
     white-space: pre-wrap;
@@ -528,34 +531,42 @@ canvas {
 .tree-card:nth-child(3n) {
     animation-delay: 30ms;
 }
-.tree-card:nth-child(1) { top: 13%; left: 48%; }
-.tree-card:nth-child(2) { top: 17%; left: 43%; }
-.tree-card:nth-child(3) { top: 23%; left: 51%; }
-.tree-card:nth-child(4) { top: 25%; left: 30%; }
-.tree-card:nth-child(5) { top: 40%; left: 30%; }
-.tree-card:nth-child(6) { top: 50%; left: 30%; }
-.tree-card:nth-child(7) { top: 55%; left: 30%; }
-.tree-card:nth-child(8) { top: 58%; left: 51%; }
-.tree-card:nth-child(9) { top: 60%; left: 30%; }
-.tree-card:nth-child(10) { top: 62%; left: 30%; }
-.tree-card:nth-child(11) { top: 64%; left: 30%; }
-.tree-card:nth-child(12) { top: 66%; left: 30%; }
-.tree-card:nth-child(13) { top: 68%; left: 48%; }
-.tree-card:nth-child(14) { top: 70%; left: 43%; }
-.tree-card:nth-child(15) { top: 72%; left: 51%; }
-.tree-card:nth-child(16) { top: 13%; left: 48%; }
-.tree-card:nth-child(17) { top: 17%; left: 43%; }
-.tree-card:nth-child(18) { top: 23%; left: 51%; }
-.tree-card:nth-child(19) { top: 25%; left: 30%; }
-.tree-card:nth-child(20) { top: 40%; left: 30%; }
-.tree-card:nth-child(21) { top: 50%; left: 30%; }
-.tree-card:nth-child(22) { top: 55%; left: 30%; }
-.tree-card:nth-child(23) { top: 58%; left: 51%; }
-.tree-card:nth-child(24) { top: 60%; left: 30%; }
-.tree-card:nth-child(25) { top: 62%; left: 30%; }
-.tree-card:nth-child(26) { top: 64%; left: 30%; }
-.tree-card:nth-child(27) { top: 66%; left: 30%; }
-.tree-card:nth-child(28) { top: 68%; left: 48%; }
-.tree-card:nth-child(29) { top: 70%; left: 43%; }
-.tree-card:nth-child(30) { top: 72%; left: 51%; }
-.tree-card:nth-child(31) { top: 75%; left: 51%; }
+.tree-card:nth-child(1) { top: 14%; left: 46%; }
+.tree-card:nth-child(2) { top: 19%; left: 43%; }
+.tree-card:nth-child(3) { top: 17%; left: 49%; }
+.tree-card:nth-child(4) { top: 59%; left: 40%; }
+.tree-card:nth-child(5) { top: 74%; left: 50%; }
+.tree-card:nth-child(6) { top: 73%; left: 66%; }
+.tree-card:nth-child(7) { top: 25%; left: 48%; }
+.tree-card:nth-child(8) { top: 27%; left: 51%; }
+.tree-card:nth-child(9) { top: 29%; left: 42%; }
+.tree-card:nth-child(10) { top: 68%; left: 24%; }
+.tree-card:nth-child(11) { top: 33%; left: 51%; }
+.tree-card:nth-child(12) { top: 35%; left: 39%; }
+.tree-card:nth-child(13) { top: 37%; left: 48%; }
+.tree-card:nth-child(14) { top: 39%; left: 43%; }
+.tree-card:nth-child(15) { top: 41%; left: 55%; }
+.tree-card:nth-child(16) { top: 43%; left: 48%; }
+.tree-card:nth-child(17) { top: 45%; left: 39%; }
+.tree-card:nth-child(18) { top: 47%; left: 51%; }
+.tree-card:nth-child(19) { top: 49%; left: 36%; }
+.tree-card:nth-child(20) { top: 51%; left: 43%; }
+.tree-card:nth-child(21) { top: 53%; left: 58%; }
+.tree-card:nth-child(22) { top: 55%; left: 38%; }
+.tree-card:nth-child(23) { top: 57%; left: 51%; }
+.tree-card:nth-child(24) { top: 59%; left: 59%; }
+.tree-card:nth-child(25) { top: 61%; left: 30%; }
+.tree-card:nth-child(26) { top: 63%; left: 46%; }
+.tree-card:nth-child(27) { top: 65%; left: 34%; }
+.tree-card:nth-child(28) { top: 67%; left: 63%; }
+.tree-card:nth-child(29) { top: 69%; left: 43%; }
+.tree-card:nth-child(30) { top: 71%; left: 56%; }
+.tree-card:nth-child(31) { top: 73%; left: 25%; }
+.tree-card:nth-child(32) { top: 75%; left: 37%; }
+.tree-card:nth-child(33) { top: 77%; left: 66%; }
+.tree-card:nth-child(34) { top: 78%; left: 48%; }
+.tree-card:nth-child(35) { top: 79%; left: 30%; }
+.tree-card:nth-child(36) { top: 83%; left: 51%; }
+.tree-card:nth-child(37) { top: 76%; left: 58%; }
+.tree-card:nth-child(38) { top: 69%; left: 33%; }
+.tree-card:nth-child(39) { top: 65%; left: 55%; }
